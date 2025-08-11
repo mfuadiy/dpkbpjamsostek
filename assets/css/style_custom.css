@@ -1,0 +1,329 @@
+html {
+	position: relative;
+}
+
+body {
+	margin-bottom: 100px;
+	font-family: "Open Sans", sans-serif;
+	/*	background-color: #F8F8F8;*/
+}
+
+hr {
+	width: 300px;
+	border-top: 4px solid #666;
+}
+
+.garis hr {
+	width: 1100px;
+	border-top: 1px solid #666;
+}
+
+.image img {
+	width: 150px;
+	padding-top: 2%;
+}
+
+/*Navbar*/
+.custom-navbar {
+	background: #0e8744;
+	font-size: 13px;
+	color: white;
+}
+.dropdown-item:hover {
+	background-color: #ffffff;
+	color: #fff;
+}
+
+.nav-link {
+	position: relative;
+	color: white !important; /* Default text color */
+	text-decoration: none;
+}
+
+.nav-link::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: white; /* White underline by default */
+	transform: scaleX(0); /* Hide the underline initially */
+	transform-origin: bottom right;
+	transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+	color: rgb(248, 245, 41) !important; /* Light blue text on hover */
+}
+
+.nav-link:hover::before {
+	background-color: rgb(248, 245, 41); /* Light blue underline on hover */
+	transform: scaleX(1); /* Show the underline on hover */
+	transform-origin: bottom left;
+}
+
+.navbar-toggler:hover {
+	background-color: transparent;
+	border-radius: 20%;
+}
+
+/* Make the carousel full width */
+#carouselExampleControls {
+	width: 100%;
+	margin: 0 auto; /* Center the carousel */
+}
+
+/* Ensure images fill the carousel */
+.carousel-inner {
+	width: 100%;
+}
+
+.carousel-item img {
+	width: 100%;
+	height: auto; /* Maintain aspect ratio */
+	max-height: 80vh; /* Optional: Limit height to 80% of viewport height */
+}
+
+.carousel-control-prev {
+	border-radius: 50px;
+	background: white;
+	height: 50px;
+	width: 50px;
+	margin-top: auto;
+	margin-left: 10px;
+	margin-bottom: auto;
+}
+
+.carousel-control-next {
+	border-radius: 50px;
+	background: white;
+	height: 50px;
+	width: 50px;
+	margin-top: auto;
+	margin-right: 10px;
+	margin-bottom: auto;
+}
+
+/*Index.html*/
+.tentang {
+	padding-top: 20px;
+	min-height: 50%;
+	background-color: #fff;
+	border-radius: 10%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.pengawas {
+	min-height: 50%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.pengurus {
+	min-height: 50%;
+	background-color: #0e8744;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.pengurus img {
+	border-radius: 50%;
+	width: 180px;
+	height: 180px;
+}
+
+.visimisi {
+	min-height: 850px;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	/*background-color: #FFF;*/
+}
+
+/*Kontak.html*/
+
+.kontak {
+	width: 100%;
+	min-height: 900px;
+}
+
+/*Laporan.html*/
+
+/*Keuangan*/
+.rasio {
+	min-height: 300px;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.kekayaan {
+	min-height: 980px;
+	border-radius: 10%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+/*kepesertaan*/
+.kepesertaan {
+	min-height: 50%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+/*Ikhtisar*/
+.ikhtisar {
+	min-height: 1000px;
+	/*background-color: #FFF;*/
+	border-radius: 10%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.table-container {
+	overflow: auto;
+}
+
+/*Buletin*/
+.berita {
+	min-height: 780px;
+	padding-top: 2%;
+	/*padding-bottom: 2%;*/
+	/*background-color: #FFF;*/
+}
+
+.buletin {
+	min-height: 780px;
+	padding-top: 2%;
+	/*padding-bottom: 2%;*/
+	/*background-color: #FFF;*/
+}
+
+.buletin img {
+	width: 180px;
+	height: 200px;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+/*Tabel*/
+.total {
+	border: 3px solid gray !important;
+}
+
+/*Button*/
+.tombol {
+	width: 200px;
+	border-radius: 10px; /* Rounded corners */
+	border: 3px solid #326398;
+	background: none;
+	padding: 10px 20px;
+	font-size: 13px;
+	font-family: "Helvetica", sans-serif;
+	cursor: pointer;
+	margin: 10px;
+	transition: all 0.2s ease; /* Faster transition */
+	position: relative;
+	overflow: hidden;
+	outline: none; /* Remove default focus outline */
+}
+
+/* Button Text */
+.tombol1 {
+	color: #326398;
+}
+
+.tombol1:hover {
+	color: #fff;
+}
+
+/* Background Animation */
+.tombol1::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0%; /* Start with no width */
+	height: 100%; /* Full height */
+	background: #326398;
+	z-index: -1;
+	transition: all 0.2s ease; /* Faster transition */
+}
+
+.tombol1:hover::before {
+	width: 100%; /* Expand to full width */
+}
+
+/* Hover Effect for Button Border */
+.tombol1:hover {
+	border-color: #fff; /* Change border color on hover */
+}
+
+/* Optional: Add a subtle shadow for depth */
+.tombol {
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tombol:hover {
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Optional: Add a smooth scale effect on hover */
+.tombol:hover {
+	transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/*Footer*/
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 320px;
+	background-color: #333;
+	padding-top: 50px;
+	opacity: 75%;
+}
+
+footer h6 {
+	padding-top: 5px;
+	color: white;
+}
+
+img {
+	width: 80px;
+}
+.whatsapp-widget {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 1000;
+}
+
+.whatsapp-icon {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-icon:hover {
+	transform: scale(1.1);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Optional Pulse Animation */
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.whatsapp-icon {
+	animation: pulse 2s infinite;
+}

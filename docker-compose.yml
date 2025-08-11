@@ -1,0 +1,21 @@
+services:
+  dpkbpjamsostek:
+    image: php:7.4-apache
+    container_name: dpkbpjamsostek
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www/html
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.dpkbpjamsostek.rule=Host(`dpkbpjamsostek.test`)"
+      - "traefik.http.routers.dpkbpjamsostek.entrypoints=websecure"
+      - "traefik.http.routers.dpkbpjamsostek.tls.certresolver=myresolver"
+    networks:
+      - web
+      - mysql_net
+
+networks:
+  web:
+    external: true
+  mysql_net:
+    external: true
